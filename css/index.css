@@ -12,6 +12,7 @@ html,body{
     overflow: hidden;
     background-color: #ffffff;
 }
+
 header{
     height: 126px;
     width: 100%;
@@ -46,10 +47,11 @@ main{
 main::-webkit-scrollbar-thumb{
     background-color: #ff41417c;
     border-radius: 10px;
+	width: 5px;
 }
 main::-webkit-scrollbar{
     background-color: #00000000;
-    height: 10px;
+    height: 5px;width: 5px;
 }
 
 .card{
@@ -251,4 +253,86 @@ main::-webkit-scrollbar{
     /* border:1px grey solid; */
     flex: 1;
     font-size: 25px;
+}
+
+
+/* 900px */
+@media screen and (max-width: 700px){
+	body{
+		display: flex;
+		justify-content: unset;
+	}
+	#header{
+		font-size: 50px;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.headerButtonBox{
+		display: none;
+	}
+	.card{
+		border-radius: 10px;
+		margin: 10px;
+		height: 90px;
+	}
+	.inCardText{
+		display: none;
+	}
+	#buttonBox{
+		position: relative;
+		top:-45px;left: 105px;
+	}
+	.useButton{
+		height: 45px;
+		width: 80px;
+	}
+	.inCardHeader{
+		font-size: 35px;
+		display: flex;align-items: center;
+	}
+	#timer{
+		height: 370px;
+	}
+	main{
+		display: flex;flex-direction: column;
+		align-items: center;padding: 0;
+		overflow-x: hidden;flex: 1;
+	}
+	.footer{
+		display: none;
+	}
+	#aboutMore{
+		display: none;
+	}
+}
+
+/* 400px */
+@media screen and (max-width: 400px){
+	#header{
+		font-size: 40px;
+	}
+	.card{
+		width: 80%;
+	}
+	.secondaryFunction{
+		width: 90%;
+	}
+	.secondaryFunButton{
+		position: relative;
+		left: 35px;
+	}
+	.inSecondaryFun{
+		font-size: 20px;
+	}
+	.useButton{
+		position: relative;
+		right: 25px;font-size: 20px;
+	}
+	.inCardHeader{
+		font-size: 25px;
+		position: relative;
+		top:8px;
+	}
 }

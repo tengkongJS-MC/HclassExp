@@ -245,6 +245,68 @@
             padding-left: 20px;
             color: gray;
         }
+		#closeSettings{
+			display: none;
+		}
+		@media screen and (max-width:1200px){
+			#settings{
+				height: 70%;width:70%;
+			}
+			.sideBarSetting{
+				display: none;
+			}
+			.setButtons{
+				font-size: 20px;
+			}
+			p{
+				display: none;
+			}
+			#closeSettings{
+				display: flex;
+			
+		}
+		@media screen and (max-width:700px){
+			.title{
+				font-size: 75px;
+			}
+			.secTitle{
+				font-size: 28px;
+			}
+			.pColor{
+				display: none;
+			}
+		}
+		}
+		@media screen and (max-width:500px){
+			.title{
+				font-size: 60px;
+				height: 130px;
+			}
+			.secTitle{
+				font-size: 20px;
+			}
+			.pColor{
+				display: none;
+			}
+			#settings{
+				height: 90%;width: 90%;
+			}
+		}
+		@media screen and (max-width:400px){
+			.title{
+				font-size: 50px;
+				height: 100px;
+			}
+			.secTitle{
+				font-size: 18px;
+			}
+			.pColor{
+				display: none;
+			}
+			#settings{
+				height: 90%;width: 90%;
+			}
+		}
     </style>
     <title>展示屏幕</title>
 </head>
@@ -260,6 +322,7 @@
             <button class="sideBarButton" onclick="closeSettings()">退出设置</button>
         </div>
         <div class="sideBarMain">
+			<button class="setButtons" onclick = "closeSettings()" id="closeSettings">关闭设置</button>
             <div class="sideBarMainTitle">
                 常用语句
             </div>
@@ -294,8 +357,8 @@
             <button class="boxButton" onclick="change('text','main')">确认</button>
         </div>
         <div class="inBox">
-            <p style="font-size: 20px;">更改主标题颜色：</p>
-            <input type="text" class="boxInput" id="mainColorChoice" placeholder="请输入十六进制色号" style="width: 10%;"/>
+            <p class = "pColor" style="font-size: 20px;">更改主标题颜色：</p>
+            <input type="text" class="boxInput" id="mainColorChoice" placeholder="请输入十六进制色号" style="width: 20%;"/>
             <button class="boxButton" onclick="change('color','main')">确认</button>
         </div>
         <button class="boxbutton" id="closeNav" onclick="closeModalBox('main')">关闭</button>
@@ -309,8 +372,8 @@
             <button class="boxButton" onclick="change('text','notMain')">确认</button>
         </div>
         <div class="inBox">
-            <p style="font-size: 20px;">更改副标题颜色：</p>
-            <input type="text" class="boxInput" id="notMainColorChoice" placeholder="请输入十六进制色号" style="width: 10%;"/>
+            <p class = "pColor" style="font-size: 20px;">更改副标题颜色：</p>
+            <input type="text" class="boxInput" id="notMainColorChoice" placeholder="请输入十六进制色号" style="width: 20%;"/>
             <button class="boxButton" onclick="change('color','notMain')">确认</button>
         </div>
         <button class="boxbutton" id="closeNav" onclick="closeModalBox('notMain')">关闭</button>
@@ -320,10 +383,10 @@
             <img src="./sucai/settings.svg" class="footerButtonsImg">
         </button>
         <button class="footerButtons" id="disFullScreen" onclick="fixerEFS(),exitFullscreen()">
-            <img src="./sucai/全屏.svg" class="footerButtonsImg">
+            <img src="./sucai/quanping.svg" class="footerButtonsImg">
         </button>
         <button class="footerButtons" id="fullScreen" onclick="handleFullScreen()()">
-            <img src="./sucai/全屏.svg" class="footerButtonsImg">
+            <img src="./sucai/quanping.svg" class="footerButtonsImg">
         </button>
     </div>
     <script>

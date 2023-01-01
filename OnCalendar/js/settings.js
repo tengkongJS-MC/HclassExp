@@ -48,6 +48,61 @@ function showNormal(){
     document.getElementById("timeBox").style.transform = "translate(0%,0%)";
     document.getElementById("timeBox").style.width = "35%";
     document.getElementById("timeBox").style.height = "25%";
-    document.getElementById("noticeBox").style.display = "flex";
     document.getElementById("homeworks").style.removeProperty("position");
+	if(windowWidth >= 650){
+		document.getElementById("noticeBox").style.display = "flex";
+	}else{
+		document.getElementById("noticeBox").style.display = "none";
+	}
+}
+
+// 解决标语框响应式的大问题
+window.addEventListener("resize",function(){
+	let windowWidth = Number(document.documentElement.clientWidth);
+	if(windowWidth >= 650){
+		document.getElementById("noticeBox").style.display = "flex";
+		document.getElementById("smallScreen").style.display = "none";
+		a = document.getElementById("timeBox");
+		a.style.display = "flex";
+		a.style.height = "25%";
+		a.style.width = "35%";
+		a.style.fontSize = "130px";
+	}else{
+		document.getElementById("noticeBox").style.display = "none";
+		document.getElementById("smallScreen").style.display = "flex";
+		document.getElementById("timeBox").style.display = "none";
+	}
+})
+
+//小屏幕使用提醒
+function smallScreen(){
+	let windowWidth = Number(document.documentElement.clientWidth);
+	if(windowWidth >= 650){
+		document.getElementById("smallScreen").style.display = "none";
+	}else{
+		document.getElementById("smallScreen").style.display = "flex";
+	}
+}
+
+//焦点模式响应式
+function showSmallFocus(){
+	let windowWidth = Number(document.documentElement.clientWidth);
+	if(windowWidth >= 650){
+		return;
+	}else{
+		a = document.getElementById("timeBox");
+		a.style.display = "flex";
+		a.style.height = "150px";
+		a.style.width = "auto";
+		a.style.fontSize = "90px";
+	}
+}
+
+function showSmallNormal(){
+	let windowWidth = Number(document.documentElement.clientWidth);
+	if(windowWidth >= 650){
+		return;
+	}else{
+		document.getElementById("timeBox").style.display = "none";
+	}
 }

@@ -152,6 +152,7 @@ function bodyOnload(){
     classList();
     startOneSay();
     grayScale();
+	smallScreen();
 }
 
 //通知气泡控制函数

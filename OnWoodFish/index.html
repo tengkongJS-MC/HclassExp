@@ -120,16 +120,16 @@
             <h2>选择您所使用的工具</h2>
             <div id="cardBox">
                 <button id="card">
-                    <img src="./pictures/木鱼.svg" id="inC" onclick="toolChange(1)">
+                    <img src="./pictures/muyu.svg" id="inC" onclick="toolChange(1)">
                 </button>
                 <button id="card">
-                    <img src="./pictures/鞭炮.svg" id="inC" onclick="toolChange(2)">
+                    <img src="./pictures/bianpao.svg" id="inC" onclick="toolChange(2)">
                 </button>
                 <button id="card">
-                    <img src="./pictures/鲶鱼.svg" id="inC" onclick="toolChange(3)">
+                    <img src="./pictures/nianyu.svg" id="inC" onclick="toolChange(3)">
                 </button>
                 <button id="card">
-                    <img src="./pictures/更多.svg" id="inC" onclick="about()">
+                    <img src="./pictures/gengduo.svg" id="inC" onclick="about()">
                 </button>
             </div>
         </div>
@@ -189,13 +189,13 @@
         //工具更改函数
         function toolChange(toolName){
             if(toolName === 1){
-                document.getElementById("fishBox").innerHTML = "<img src=\"./pictures/木鱼.svg\" id=\"inB\">";
+                document.getElementById("fishBox").innerHTML = "<img src=\"./pictures/muyu.svg\" id=\"inB\">";
                 musicName = "woodFish";
             }else if(toolName === 2){
-                document.getElementById("fishBox").innerHTML = "<img src=\"./pictures/鞭炮.svg\" id=\"inB\">";
+                document.getElementById("fishBox").innerHTML = "<img src=\"./pictures/bianpao.svg\" id=\"inB\">";
                 musicName = "fireworks";
             }else if(toolName === 3){
-                document.getElementById("fishBox").innerHTML = "<img src=\"./pictures/鲶鱼.svg\" id=\"inB\">";
+                document.getElementById("fishBox").innerHTML = "<img src=\"./pictures/nianyu.svg\" id=\"inB\">";
                 musicName = "fish";
             }
         }

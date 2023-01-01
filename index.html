@@ -13,7 +13,7 @@
     <header>
         <div class="modalBoxAlert" id="alertBox">
             <button class="headerButton" id="modalButtonClose">
-                <img src="./sucai/关闭小.svg" class="headerImg" onclick="closeModal()">
+                <img src="./sucai/guanbi.svg" class="headerImg" onclick="closeModal()">
             </button>
             <div class="modalAlertHeader" id="modalAlertHeader">
 
@@ -29,10 +29,10 @@
         </h1>
         <div class="headerButtonBox">
             <button class="headerButton" id="fullScreen" onclick="handleFullScreen()">
-                <img src="./sucai/全屏.svg" class="headerImg">
+                <img src="./sucai/quanping.svg" class="headerImg">
             </button>
             <button class="headerButton" id="disFullScreen" onclick="fixerEFS(),exitFullscreen()">
-                <img src="./sucai/全屏.svg" class="headerImg">
+                <img src="./sucai/quanping.svg" class="headerImg">
             </button>
             <button class="headerButton" id="headerButton">
                 <img src="./sucai/settings.svg" class="headerImg">
@@ -117,8 +117,7 @@
             <p class="inCardText" id="textInShowScreen">
                 这是一个展示界面，您可以在班会课或上课时使用它来代替PPT
             </p>
-            <div
-                style="height: 120px;width: 100%;display: flex;justify-content: center;align-items: center;position: relative;top:220px;left: -13px;">
+            <div id="buttonBox">
                 <button class="useButton" id="buttonInShowScreen">
                     <a class="inButtonText" onclick="openPage('showScreen')">
                         启动
@@ -179,9 +178,9 @@
     </main>
     <div class="footer">
         <p class="inFooter">
-            开发：TengKong@野生技协verson:1.2.2 2023/01/01
+            开发：TengKong@野生技协verson:1.3 2023/01/01
         </p>
-        <p class="inFooter">
+        <p class="inFooter" id="aboutMore">
             野生技协合作：方块茶话会 音幻宝中 朗诵社 排球社 合唱团 街舞社 汉服社 航模社 民乐社 心理社 书画社 动漫社 舞蹈队 日语社 Instreet社 机器人社 推理社 篮裁社 魔术社
             冒险家协会
         </p>

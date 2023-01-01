@@ -46,7 +46,7 @@
             <img src="./pictures/logo带字.png" id="modalImg">
         </div>
         <div class="modalMain" id="settingsMain">
-            <h2  style="text-align:center;padding: 0;padding-bottom:10px;margin: 0;margin-bottom: 15px;font-size: 40px;border-bottom: 1px rgb(55,55,55) solid;">一九班历设置</h2>
+            <h2  style="text-align:center;padding: 0;padding-bottom:10px;margin: 0;margin-bottom: 15px;border-bottom: 1px rgb(55,55,55) solid;">一九班历设置</h2>
             <div id="setTitle"> 颜色主题</div>
             <div id="setAction">
                 <button class="color" id = "red" onclick="color('#ff5050')"></button>
@@ -57,10 +57,10 @@
             </div> 
             <div id="setTitle">显示模式</div>
             <div id="setAction">
-                <button class="showFunc" id="normal" onclick="showNormal()">
+                <button class="showFunc" id="normal" onclick="showSmallNormal(),showNormal()">
                     <img src="./pictures/normal.svg" style="height: 90%;width: auto;">
                 </button>
-                <button class="showFunc" id="focus" onclick="showFocus()">
+                <button class="showFunc" id="focus" onclick="showFocus(),showSmallFocus()">
                     <img src="./pictures/focus.svg" style="height: 100%;width: auto;">
                 </button>
             </div>
@@ -71,10 +71,10 @@
     <!-- 关于 -->
     <div class="modalBox" id="modalAbout">
         <button class="buttonWidthSameAsHeight" id="buttonCloseModal" onclick="closeModal('modalAbout')">
-            <img src="./pictures/关闭小.svg" class="inWsahButtonImg">
+            <img src="./pictures/guanbi.svg" class="inWsahButtonImg">
         </button>
         <div class="modalTitle" id="settingsTitle">
-            <img src="./pictures/logo带字.png" id="modalImg">
+            <img src="./pictures/logodaizi.png" id="modalImg">
         </div>
         <div class="modalMain" id="aboutMain">
             <div id="verson">
@@ -160,6 +160,12 @@
 
                         </div>
                     </div>
+					<!-- 响应式小屏幕提醒 -->
+					<div class="sidebarNameBox" id="smallScreen">
+					    <div class="sidebarNameBoxMain" id="smallScreenMain" style="font-size: 20px;color:rgb(70,70,70);">
+								小屏功能不完善，请使用大屏
+					    </div>
+					</div>
                 </div>
             </div>
         </div>
@@ -167,10 +173,10 @@
         <!-- 底部 -->
         <div class="sidebarFooter" id="sidebarFooter">
             <button class="buttonWidthSameAsHeight" id="fullScreen" onclick="handleFullScreen(),addFontFullScreen()">
-                <img src="./pictures/全屏.svg" class="inWsahButtonImg">
+                <img src="./pictures/quanping.svg" class="inWsahButtonImg">
             </button>            
             <button class="buttonWidthSameAsHeight" id="disFullScreen" onclick="fixerEFS(),exitFullScreen(),disAddFontFullScreen()">
-                <img src="./pictures/全屏.svg" class="inWsahButtonImg">
+                <img src="./pictures/quanping.svg" class="inWsahButtonImg">
             </button>
             <button class="buttonWidthSameAsHeight" id="footerButton" onclick="openModal('modalSettings')">
                 <img src="./pictures/settings.svg"  class="inWsahButtonImg">
