@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>HCLASS</title>
+</head>
+
+<body onload="grayScale()">
+    <header>
+        <div class="modalBoxAlert" id="alertBox">
+            <button class="headerButton" id="modalButtonClose">
+                <img src="./sucai/关闭小.svg" class="headerImg" onclick="closeModal()">
+            </button>
+            <div class="modalAlertHeader" id="modalAlertHeader">
+
+            </div>
+            <div class="modalAlertMain" id="modalAlertMain">
+
+            </div>
+        </div>
+
+
+        <h1 id="header">
+            Hclass Launcher
+        </h1>
+        <div class="headerButtonBox">
+            <button class="headerButton" id="fullScreen" onclick="handleFullScreen()">
+                <img src="./sucai/全屏.svg" class="headerImg">
+            </button>
+            <button class="headerButton" id="disFullScreen" onclick="fixerEFS(),exitFullscreen()">
+                <img src="./sucai/全屏.svg" class="headerImg">
+            </button>
+            <button class="headerButton" id="headerButton">
+                <img src="./sucai/settings.svg" class="headerImg">
+            </button>
+            <button class="headerButton" id="headerButton" onclick="alertByModal('Qqs')">
+                <img src="./sucai/24gf-headset.svg" class="headerImg">
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="card" id="randomNumberBuilder">
+            <p class="inCardHeader" id="headerInRandomNumberBuilder">
+                随机点人
+            </p>
+            <p class="inCardText" id="textInRandomNumberBuilder">
+                这是一个随机数生成器，您可以通过这个方式随机抽取学生的学号来回答问题
+            </p>
+            <div id="buttonBox">
+                <button class="useButton" id="buttonInRandomNumberBuilder">
+                    <a class="inButtonText" onclick="openPage('randomNB')">
+                        启动
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="card" id="testClock">
+            <p class="inCardHeader" id="headerInTestClock">
+                考试时钟
+            </p>
+            <p class="inCardText" id="textInTestClock">
+                宝中野生技协开发的考试时钟宝中限定版~
+            </p>
+            <div id="buttonBox">
+                <button class="useButton" id="buttonInTestClock">
+                    <a class="inButtonText" href="https://exam.cooo.site/" onclick="notice('clock')">
+                        跳转
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="card" id="timer">
+            <p class="inCardHeader" id="headerInTimer">
+                计时器功能
+            </p>
+            <div class="secondaryFunction" id="sFone">
+                <p class="inSecondaryFun">
+                    北京时间显示
+                </p>
+                <button class="secondaryFunButton">
+                    <a class="inButtonText" onclick="openPage('BeiJingTime')">
+                        启动
+                    </a>
+                </button>
+            </div>
+            <div class="secondaryFunction" id="sFtwo">
+                <p class="inSecondaryFun">
+                    高考计时工具
+                </p>
+                <button class="secondaryFunButton">
+                    <a class="inButtonText" onclick="openPage('countDown')">
+                        启动
+                    </a>
+                </button>
+            </div>
+            <div class="secondaryFunction" id="sFthree">
+                <p class="inSecondaryFun">
+                    秒表和计时器
+                </p>
+                <button class="secondaryFunButton">
+                    <a class="inButtonText" href="https://tool.retiehe.com/timer" onclick="notice('timer')">
+                        跳转
+                    </a>
+                </button>
+            </div>
+            <p class="inCardText" style="position: relative; top:60px">您可以使用这些计时器功能
+                来精确把握课堂时间，提升教学效果</p>
+        </div>
+        <div class="card" id="showScreen">
+            <p class="inCardHeader" id="showScreen">
+                展示屏幕
+            </p>
+            <p class="inCardText" id="textInShowScreen">
+                这是一个展示界面，您可以在班会课或上课时使用它来代替PPT
+            </p>
+            <div
+                style="height: 120px;width: 100%;display: flex;justify-content: center;align-items: center;position: relative;top:220px;left: -13px;">
+                <button class="useButton" id="buttonInShowScreen">
+                    <a class="inButtonText" onclick="openPage('showScreen')">
+                        启动
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="card" id="touPiao">
+            <p class="inCardHeader" id="headerInTouPiao">投票系统</p>
+            <p class="inCardText" id="textInTouPiao">这是一个简单的投票系统，您可以使用它来替代在黑板上画正字</p>
+            <div id="buttonBox">
+                <button class="useButton" id="buttonInTouPiao">
+                    <a class="inButtonText" onclick="openPage('touPiao')">
+                        启动
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="card" id="covid">
+            <p class="inCardHeader" id="headerInCovid">疫情形势播报</p>
+            <p class="inCardText" id="textInCovid">这里可以看见全国的疫情形势（跳转到百度疫情专项）</p>
+            <div id="buttonBox">
+                <button class="useButton" id="buttonInCovid">
+                    <a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_aladin_banner"
+                        class="inButtonText">跳转</a>
+                </button>
+            </div>
+        </div>
+        <div class='card'>
+            <p class='inCardHeader'>一九班历内测</p>
+            <p class='inCardText'>这是一个为班级开发的有有用功能的时钟和日历工具</p>
+            <div id='buttonBox'>
+                <button class='useButton'>
+                    <a class='inButtonText' href="./OnCalendar/index.html">启动</a>
+                </button>
+            </div>
+        </div>
+        <div class='card'>
+            <p class='inCardHeader'>2023贺岁</p>
+            <p class='inCardText'>这是一个2023年将至的新年贺岁木鱼程序</p>
+            <div id='buttonBox'>
+                <button class='useButton'>
+                    <a class='inButtonText' href="./OnWoodFish/index.html">启动</a>
+                </button>
+            </div>
+        </div>
+        <div class="card" id="about">
+            <p class="inCardHeader" id="headerInAbout">关于和日志</p>
+            <p class="inCardText" id="textInAbout">在这里您可以看到一些关于本软件的事情和Hclass的更新日志</p>
+            <div id="buttonBox">
+                <button class="useButton" id="buttonInAbout">
+                    <a class="inButtonText" onclick="openPage('about')">
+                        查看
+                    </a>
+                </button>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <p class="inFooter">
+            开发：TengKong@野生技协verson:1.2.2 2023/01/01
+        </p>
+        <p class="inFooter">
+            野生技协合作：方块茶话会 音幻宝中 朗诵社 排球社 合唱团 街舞社 汉服社 航模社 民乐社 心理社 书画社 动漫社 舞蹈队 日语社 Instreet社 机器人社 推理社 篮裁社 魔术社
+            冒险家协会
+        </p>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
